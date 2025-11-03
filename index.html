@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<!-- font  -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Momo+Trust+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+ <!-- font  -->
+
+<body>
+    <h1>Fortune Generator</h1>
+
+    <div class="box-and-buttons">
+
+        <div id="fortuneBox" class="fortune-box"></div>
+
+        <div class="button-container">
+            <div class="btn_con">
+                <button id="style1" style="background-color: #4caf50;"></button>
+                <button id="style2" style="background-color: yellow;"></button>
+            </div>
+            <div class="btn_con">
+                <button id="style3" style="background-color: rgb(255, 102, 0);"></button>
+                <button id="style4" style="background-color: rgb(106, 106, 243);"></button>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div>
+        <a href="stopwatch.html" target="_blank">Click to go to stopwatch</a>
+        or
+        <a href="todo-list.html" target="_blank">Click to go to to-do-list</a>
+    </div>
+    <footer>
+        © Made by a Nafeej Tamjeed
+    </footer>
+
+    <script>
+      
+        const fortunes = [
+            "An unexpected opportunity will open a new door for you soon.",
+
+            "Your creativity will lead you to something truly remarkable.",
+
+            "A smile you share today will return to you tenfold.",
+
+            "The answer you’ve been looking for will reveal itself in silence.",
+
+            "Trust your timing — everything is unfolding perfectly.",
+
+            "A small act of kindness will bring great joy to your heart.",
+
+            "You are about to enter a phase of abundance and peace.",
+
+            "Someone will appreciate your hard work more than you expect.",
+
+            "Your curiosity will guide you toward a life-changing discovery.",
+
+            "The universe is aligning in your favor — stay patient and positive."
+        ];
+
+
+        /*console.log("Fortune array created successfully!");*/
+        alert("Welcome to the Fortune Generator!");
+
+
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        const selectedFortune = fortunes[randomIndex];
+        /*console.log("Selected fortune:", selectedFortune);*/
+
+
+        const fortuneBox = document.getElementById("fortuneBox");
+        fortuneBox.innerText = selectedFortune;
+
+
+        document.getElementById("style1").addEventListener("click", function () {
+            fortuneBox.style.color = "rgb(255, 102, 0)";
+            fortuneBox.style.backgroundColor = "#4caf50";
+            fortuneBox.style.borderColor = "yellow";
+            fortuneBox.style.fontFamily = "Momo Trust Display", sans-serif;;
+            fortuneBox.style.fontSize = "25px";
+        });
+
+        document.getElementById("style2").addEventListener("click", function () {
+            fortuneBox.style.color = "#0d47a1";
+            fortuneBox.style.backgroundColor = "yellow";
+            fortuneBox.style.borderColor = "rgb(255, 102, 0)";
+            fortuneBox.style.fontFamily = "Smooch Sans", sans-serif;;
+            fortuneBox.style.fontSize = "30px";
+        });
+
+        document.getElementById("style3").addEventListener("click", function () {
+            fortuneBox.style.color = "yellow";
+            fortuneBox.style.backgroundColor = "rgb(255, 102, 0)";
+            fortuneBox.style.borderColor = "rgb(91, 91, 243)";
+            fortuneBox.style.fontFamily = "Playfair Display", serif;
+            fortuneBox.style.fontSize = "35px";
+        });
+
+
+        document.getElementById("style4").addEventListener("click", function () {
+            fortuneBox.style.color = "yellow";
+            fortuneBox.style.backgroundColor = "rgb(106, 106, 243)";
+            fortuneBox.style.borderColor = "rgb(255, 102, 0)";
+            fortuneBox.style.fontFamily = "Momo Signature", cursive;;
+            fortuneBox.style.fontSize = "18px";
+        });
+    </script>
+</body>
+
+</html>
